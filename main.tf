@@ -113,7 +113,7 @@ resource "azurerm_linux_virtual_machine" "public_vm" {
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.public_vm_nic.id]
-  size                  = "Standard_B4as"  # 4 vCPU, 16GB RAM
+  size                  = "Standard_B4ms"  # 4 vCPU, 16GB RAM
 
   os_disk {
     name                 = "publicVMOsDisk"
@@ -148,7 +148,7 @@ resource "azurerm_linux_virtual_machine" "private_vm" {
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.private_vm_nic.id]
-  size                  = "Standard_B4as"  # 4 vCPU, 16GB RAM
+  size                  = "Standard_B4ms"  # 4 vCPU, 16GB RAM
 
   os_disk {
     name                 = "privateVMOsDisk"
